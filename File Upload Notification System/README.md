@@ -1,1 +1,1 @@
-
+Create a system that monitors an S3 bucket for new file uploads, by triggering a Lambda function to process the uploaded files, then sending a notification using SNS, and finally stores metadata in an SQS queue.
