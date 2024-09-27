@@ -1,6 +1,6 @@
 We will be creating  a DynamoDB table full of employees and their status. when there's any change occurs in the table streams, a Lambda will be triggered that will send an email saying that “[employee status] has been changed!”
 
-when changing an item in the table, dynamo db will update the stream of its table with the new item, and the trigger forthat will be the lambda function, sp it will send these new records through the lambda function, then the lambda function will pass those records to SNS service which will send an e-mail with the new records and the updated status.
+when changing an item in the table, dynamo db will update the stream of its table with the new item, and the trigger for that will be the lambda function, sp it will send these new records through the lambda function, then the lambda function will pass those records to SNS service which will send an e-mail with the new records and the updated status.
 
 NOTE**: when we use scan operation on the dynamo db by using filters we're consuming 4 times the reading capacity units compared to using queries, that's why it's much better to create indexies use queries in dynamo db.
 
